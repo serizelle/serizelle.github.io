@@ -1,0 +1,110 @@
+@charset "utf-8";
+@font-face {
+    font-family: hobbit;
+    src: url(fonts/Middleearth-ao6m.ttf);
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: all .3s linear;
+}
+body {
+    position: relative;
+    font-family: hobbit;
+    cursor: url(img/rsz_1blue_arrow.png), auto;
+}
+
+title {
+    font-family: hobbit;
+}
+
+h1 {
+    font-size: 3vw;
+    color: rgb(98, 147, 221);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 2px #ea00ffb0;
+    text-align: center;
+}
+
+.kjell {
+    text-decoration: none;
+    color: inherit;
+}
+.kjell:hover {
+    cursor: url(img/rsz_pink_heart.png), auto;
+    text-shadow: 2px 2px 2px black;
+    color: inherit;
+}
+.footer-hearts {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+}
+.hearts {
+    opacity: 0.5;
+}
+.hearts:hover {
+    opacity: 1;
+    cursor: url(img/rsz_pink_heart.png), auto;
+}
+
+/* page animation */
+.transition-fade {
+    opacity: 1;
+    transition: 400ms;
+}
+html.is-animating .transition-fade {
+    opacity: 0;
+
+}
+/* text hover */
+.wrapper {
+    position: absolute;
+    display: flex;
+    min-height: 500px;
+    width: 1000px;
+    top: 10px;
+    left: 10%;
+}
+.box {
+    position: relative;
+    max-width: 1000px;
+    max-height: 60px;
+    font-size: 2vw;
+    white-space: nowrap;
+}
+.wrapper .box {
+    color: rgb(201, 98, 221);
+    text-shadow: 0 5px 5px rgb(70, 136, 211);
+}
+.wrapper .box:hover {
+    position: absolute;
+    z-index: 2;
+    color: rgb(192, 29, 83);
+    text-shadow: 0 5px 5px rgb(122, 190, 207);
+    cursor: url(img/rsz_loveu.png), auto;
+}
+.effect {
+    position: relative;
+    pointer-events: none;
+    z-index: 1;
+    box-shadow: 5px 5px 5px rgba(182, 57, 199, 0.534);
+    border-radius: 25px;
+    top: -300;
+    left: -200;
+    transform: translate(100%,10%) scale(.2);
+    opacity: 0;
+    max-width: 300px;
+    max-height: 300px;
+}
+.wrapper .box:hover ~ .effect {
+    transform: translate(-50%,9%) scale(1);
+    opacity: 1;
+}
