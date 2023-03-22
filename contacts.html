@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Контакты</title>
+</head>
+<body>
+    <div class="all">
+        <header class="header">
+            <a class="logo" href="index.html">
+                <img src="img/logo.svg" alt="logo">
+            </a>
+            <nav>
+                <ul class="menu">
+                    <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
+                    <li class="menu__item"><a class="menu__link" href="students.html">Студенты</a></li>
+                    <li class="menu__item"><a class="menu__link" href="about.html">О курсе</a></li>
+                    <li class="menu__item"><a class="menu__link menu__link_active" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <a class="button button-open" href="#">Войти</a>
+            <div class="modal hidden">
+                <div class="modal-content">
+                    <h3 class="subtitle subtitle-modal">Войти на сайт</h3>
+                    <input type="text" class="input" placeholder="Логин">
+                    <input class="input" type="password" placeholder="Пароль">
+                    <a class="button button-close" href="#">Войти</a>
+                </div>
+            </div>
+        </header>
+        <main class="content-contacts">
+            <h1 class="title-contacts content__item">Как нас найти 🗺️️</h1>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d511634.798075958!2d29.5329391827636!3d59.939220178452594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696378cc74a65ed%3A0x6dc7673fab848eff!2sSt%20Petersburg!5e0!3m2!1sen!2sru!4v1677065901957!5m2!1sen!2sru" width="1268" height="370" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="contacts content__item">
+                <h2 class="subtitle">Наши контакты</h2>
+                <p class="address">
+                    Адрес: г. Санкт-Петербург, Дворцовая пл., 2, 190000</p>
+                <a class="phone" href="tel:+781555-55-55">Тел: +7 (812) 555-55-55</a>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <p class="footer-text">2023 © <a class="footer-link" href="#">учебный центр</a></p>
+    </footer>
+    <script defer src="script.js"></script>
+</body>
+</html>

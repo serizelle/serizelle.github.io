@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>О курсе</title>
+</head>
+<body>
+    <div class="all">
+        <header class="header">
+            <a class="logo" href="index.html">
+                <img src="img/logo.svg" alt="logo">
+            </a>
+            <nav>
+                <ul class="menu">
+                    <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
+                    <li class="menu__item"><a class="menu__link" href="students.html">Студенты</a></li>
+                    <li class="menu__item"><a class="menu__link menu__link_active" href="about.html">О курсе</a></li>
+                    <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <a class="button button-open" href="#">Войти</a>
+            <div class="modal hidden">
+                <div class="modal-content">
+                    <h3 class="subtitle subtitle-modal">Войти на сайт</h3>
+                    <input type="text" class="input" placeholder="Логин">
+                    <input class="input" type="password" placeholder="Пароль">
+                    <a class="button button-close" href="#">Войти</a>
+                </div>
+            </div>
+        </header>
+        <main class="content-about">
+            <h1 class="title">О курсе 📱</h1>
+            <p class="text-about">Посмотрите видео о нас</p>
+            <iframe width="820" height="550" src="https://www.youtube.com/embed/AXLoRpKnK8U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </main>
+    </div>
+    <footer class="footer">
+        <p class="footer-text">2023 © <a class="footer-link" href="#">учебный центр</a></p>
+    </footer>
+    <script defer src="script.js"></script>
+</body>
+</html>

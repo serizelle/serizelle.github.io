@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Учимся вместе!</title>
+</head>
+<body>
+    <div class="all">
+        <header class="header">
+            <a class="logo" href="index.html">
+                <img src="img/logo.svg" alt="logo">
+            </a>
+            <nav>
+                <ul class="menu">
+                    <li class="menu__item"><a class="menu__link menu__link_active" href="index.html">Главная</a></li>
+                    <li class="menu__item"><a class="menu__link" href="students.html">Студенты</a></li>
+                    <li class="menu__item"><a class="menu__link" href="about.html">О курсе</a></li>
+                    <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <a class="button button-open" href="#">Войти</a>
+            <div class="modal hidden">
+                <div class="modal-content">
+                    <h3 class="subtitle subtitle-modal">Войти на сайт</h3>
+                    <input type="text" class="input" placeholder="Логин">
+                    <input class="input" type="password" placeholder="Пароль">
+                    <a class="button button-close" href="#">Войти</a>
+                </div>
+            </div>
+        </header>
+        <main class="content">
+            <h1 class="title">Добро пожаловать на курс “Создание веб-сайтов (HTML, CSS)”!</h1>
+            <img class="classroom" src="img/class2.jpg" alt="главное фото">
+            <div class="content-info">
+                <div class="content-section">
+                    <div class="content-article">
+                        <h3 class="subtitle">Для кого этот курс</h3>
+                        <p class="about-text">Этот курс рассчитан на новичков, которые только начинают знакомство с веб-разработкой. В начале курса вы узнаете о том, как устроен Интернет и веб-сайты.<br>Для обучения необходимо только владеть компьютерной грамотностью (пользоваться браузером, создавать папки и файлы, устанавливать программы).</p>
+                    </div>
+                    <div class="content-article">
+                        <h3 class="subtitle">Чему вы научитесь</h3>
+                        <p class="about-text">На этом курсе вы узнаете, как устроены веб-сайты и как создавать их с нуля. Изучите основы языков <strong>HTML, CSS</strong> и немного <strong>JavaScript</strong>. Мы вместе сверстаем сайт нашей группы по этому макету. А затем вы <span class="orange-text">сами</span> сверстаете свои личные странички в качестве домашнего задания и мы выложим все это на сервер.</p>
+                    </div>
+                </div>
+                <h2 class="heading">“Учимся &nbsp;&nbsp;вместе!”</h2>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <p class="footer-text">2023 © <a class="footer-link" href="#">учебный центр</a></p>
+    </footer>
+    <script defer src="script.js"></script>
+</body>
+</html>
