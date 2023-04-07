@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/svg" href="img/favicon.svg">
+    <title>О себе</title>
+</head>
+<body>
+    <div class="all">
+        <header class="header">
+            <a class="logo" href="index.html"><img src="img/logo.svg" alt="logo"></a>
+            <nav>
+                <ul class="menu">
+                    <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
+                    <li class="menu__item"><a class="menu__link menu__link_active" href="students.html">О себе</a></li>
+                    <li class="menu__item"><a class="menu__link" href="students.html">Студенты</a></li>
+                    <li class="menu__item"><a class="menu__link" href="about.html">О курсе</a></li>
+                    <li class="menu__item"><a class="menu__link" href="contacts.html">Контакты</a></li>
+
+                </ul>
+            </nav>
+            <a class="button button-open" href="#">Войти</a>
+            <div class="modal hidden">
+                <div class="modal-content">
+                    <h3 class="subtitle subtitle-modal">Войти на сайт</h3>
+                    <input type="text" class="input" placeholder="Логин">
+                    <input class="input" type="password" placeholder="Пароль">
+                    <a class="button button-close" href="#">Войти</a>
+                </div>
+            </div>
+        </header>
+        <header class="header__mobile">
+            <div class="logo__mobile"><img src="img/logo_m.svg" alt="logo"></div>
+            <nav>
+                <ul class="menu__burger menu_show">
+                    <li class="menu__item__burger"><a class="menu__link" href="index.html">Главная</a></li>
+                    <li class="menu__item__burger"><a class="menu__link" href="contacts.html">О себе</a></li>
+                    <li class="menu__item__burger"><a class="menu__link" href="students.html">Студенты</a></li>
+                    <li class="menu__item__burger"><a class="menu__link" href="about.html">О курсе</a></li>
+                    <li class="menu__item__burger"><a class="menu__link" href="contacts.html">Контакты</a></li>
+                    
+                </ul>
+            </nav>
+            <a class="button button-open2" href="#">Войти</a>
+            <div class="modal2 hidden">
+                <div class="modal-content">
+                    <h3 class="subtitle subtitle-modal">Войти на сайт</h3>
+                    <input type="text" class="input" placeholder="Логин">
+                    <input class="input" type="password" placeholder="Пароль">
+                    <a class="button button-close2" href="#">Войти</a>
+                </div>
+            </div>
+        </header>
+        <main class="content">
+            <h2 class="about_me_subtitle">Меня зовут...</h2>
+            <h1 class="about_me_title">Елена Июдина и я <span>веб-разработчик</span></h1>
+            <p class="about_me_text">
+                    Ищете профессионального и надежного веб-разработчика, который воплотит в жизнь ваше присутствие в Интернете? Вы его нашли!</p>
+            <p class="about_me_text">Я специализируюсь на создании красивых, функциональных и адаптивных веб-сайтов, отвечающих уникальным потребностям моих клиентов. Независимо от того, являетесь ли вы владельцем малого бизнеса, стремящимся заявить о себе в Интернете, предпринимателем, открывающим новый магазин электронной коммерции, или блоггером, стремящимся обновить свой веб-сайт, у меня есть навыки и опыт, чтобы воплотить ваше видение в жизнь.
+            </p>
+            <div class="container">
+                <div class="panel active" style="background-image: url(img/s2.png);">
+                <h3>Я и мои работы</h3>
+                </div>
+                <div class="panel" style="background-image: url(img/site1.png);">
+                </div>
+                <div class="panel" style="background-image: url(img/site2.png);">
+                </div>
+                <div class="panel" style="background-image: url(img/site3.png);">
+                </div>
+                <div class="panel" style="background-image: url(img/site4.png);">
+                </div>
+                <div class="panel" style="background-image: url(img/site5.png);">
+                </div>
+            </div>
+            <div class="carousel">
+                <div class="image-container" id="imgs">
+                    <img src="img/me_me.png"
+                     alt="first-image"
+                     />
+                    <img
+                     src="img/site1.png"
+                     alt="second-image"
+                     />
+                    <img
+                     src="img/site2.png"
+                     alt="third-image"
+                     />
+                    <img
+                     src="img/site3.png"
+                     alt="fourth-image"
+                     />
+                    <img
+                     src="img/site4.png"
+                     alt="fourth-image"/>
+                    <img
+                     src="img/site5.png"
+                     alt="fourth-image"/>
+                </div>
+                <div class="buttons-container">
+                        <button id="left" class="btn">←</button>
+                        <button id="right" class="btn">→</button>
+                </div>
+            </div>
+            <a class="button_github" href="https://serizelle.github.io/">
+                    <img class="github" src="img/github.svg" alt="github_logo">Мой Github
+            </a>
+        </main>
+    </div>
+    <footer class="footer">
+        <p class="footer-text">2023 © <a class="footer-link" href="#">учебный центр</a></p>
+    </footer>
+    <script defer src="script.js"></script>
+</body>
+</html>

@@ -19,9 +19,7 @@ img {
   flex-grow: 1;
   position: relative;
 }
-.logo {
-  pointer-events: none;
-}
+
 .header {
   background-color: #213b7e;
   display: flex;
@@ -34,11 +32,16 @@ img {
   font-family: "Roboto", sans-serif;
   position: relative;
 }
+.header__mobile {
+  display: none;
+}
 .menu {
   list-style-type: none;
   display: flex;
 }
-
+.logo__mobile {
+  display: none;
+}
 .menu__link {
   font-style: normal;
   font-weight: 300;
@@ -156,6 +159,102 @@ img {
   color: rgba(158, 108, 158, 0.418);
 }
 
+/* ABOUT ME */
+
+.about_me_subtitle {
+  color: #0000009d;
+  font-size: 25px;
+  margin-top: 33px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+.about_me_title {
+  margin-top: 10px;
+  margin-bottom: 35px;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+}
+.about_me_title span {
+  color: #cf5510;
+  font-weight: 700;
+}
+.about_me_text {
+  text-indent: 20px;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  width: 740px;
+}
+.button_github {
+  width: 200px;
+  height: 45px;
+  margin-top: 30px;
+  margin-left: calc(50% - 200px / 2);
+  margin-right: calc(50% - 200px / 2);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #cf5610;
+  text-decoration: none;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.github {
+  width: 27px;
+  height: 28px;
+  padding-left: 12px;
+  padding-right: 28px;
+}
+.button_github:active {
+  background-color: #cf561081;
+}
+.button_github:hover {
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+.carousel {
+  display: none;
+}
+
+/* slider */
+.container {
+  display: flex;
+  width: 740px;
+  margin-top: 30px;
+}
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40vh;
+  border-radius: 50px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+.panel h3 {
+  font-family: lobster;
+  font-size: 25px;
+  font-weight: 400;
+  color: #cf5510;
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  margin: 0;
+  opacity: 0;
+}
+.panel.active {
+  flex: 5;
+}
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3 ease-in 0.4s;
+}
+
 /* Students */
 
 .content-students {
@@ -168,7 +267,6 @@ img {
   flex-wrap: wrap;
   gap: 50px;
 }
-
 .student {
   width: 200px;
   position: relative;
@@ -181,7 +279,7 @@ img {
   box-shadow: 4px 4px 4px #ea5d217e;
 }
 .new::before {
-  content: 'Новичок';
+  content: "Новичок";
   box-sizing: border-box;
   width: 94px;
   height: 24px;
@@ -209,6 +307,10 @@ img {
   color: #000000;
   margin-top: 8px;
 }
+.my_link_text {
+  text-decoration: none;
+}
+
 /* Contacts */
 .content-contacts {
   margin-left: calc(50% - 1268px / 2);
@@ -269,7 +371,7 @@ img {
   transform: translate(-50%, 15%);
   border: #000000 1px solid;
   box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
-  z-index: 10;
+  z-index: 100;
 }
 .modal-content {
   display: flex;
@@ -295,14 +397,27 @@ img {
   display: none;
 }
 
+.modal2 {
+  width: 500px;
+  height: 418px;
+  position: absolute;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 15%);
+  border: #000000 1px solid;
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+  z-index: 101;
+}
+
 /* burger */
 
 .menu__burger {
   list-style-type: none;
   position: absolute;
   display: none;
-  top: 90px;
-  left: 32px;
+  top: 70px;
+  left: 0px;
   transition: left 0.5s;
 }
 .menu__item__burger {
@@ -364,39 +479,31 @@ img {
 
 @media (max-width: 767px) {
   .header {
-    padding-right: 16px;
-    padding-left: 0;
+    display: none;
+  }
+  .header__mobile {
+    background-color: #213b7e;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+    padding-left: calc(50% - 1268px / 2);
+    padding-right: calc(50% - 1268px / 2);
+    font-family: "Roboto", sans-serif;
+
     position: sticky;
     top: 0;
-    z-index: 99;
+    width: 100%;
+    z-index: 102;
   }
-  .logo {
+  .logo__mobile {
+    display: block;
     margin: 10px;
     position: relative;
-  }
-  .logo::after {
-    content: 'М';
-    box-sizing: border-box;
-    width: 55px;
-    height: 55px;
-    position: absolute;
-    top: 25px;
-    right: -30px;
-    font-family: "Roboto";
-    font-size: 30px;
-    text-align: center;
-    color: #ffffff;
-    background: #213b7e;
-    border: 5px #ea5d21 solid;
-    padding: 2px 4px;
-    z-index: 100;
     cursor: pointer;
-    pointer-events: all;
   }
-  .logo:hover::after {
+  .logo__mobile:hover {
     filter: drop-shadow(16px 16px 20px rgb(255, 255, 255));
   }
   .menu {
@@ -468,18 +575,78 @@ img {
   .address {
     text-align: center;
   }
-  .modal {
+  .modal2 {
     max-width: 340px;
+    height: 370px;
   }
   .input {
     max-width: 300px;
+    margin-bottom: 30px;
+  }
+  .about_me_title {
+    text-align: center;
+  }
+  .about_me_text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    text-align: center;
+    max-width: 340px;
+    margin-left: calc(50% - 340px / 2);
+    margin-right: calc(50% - 340px / 2);
+  }
+  .container {
+    display: none;
+  }
+  .carousel {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    height: 430px;
+    width: 400px;
+    overflow: hidden;
+    display: block;
+    margin-left: calc(50% - 400px / 2);
+    margin-right: calc(50% - 400px / 2);
+    margin-top: 20px;
+  }
+
+  .image-container {
+    display: flex;
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+  }
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btn {
+    background-color: #213b7e;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    width: 49.5%;
+    font-size: 17px;
+  }
+
+  .btn:hover {
+    opacity: 0.9;
+  }
+
+  .btn:focus {
+    outline: none;
+  }
+  .carousel img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
   }
 }
 
 /* Mobile S*/
 
 @media (max-width: 424px) {
-
   .content {
     margin-left: calc(50% - 320px / 2);
     margin-right: calc(50% - 320px / 2);
